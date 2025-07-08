@@ -148,7 +148,7 @@ if __name__ == "__main__":
             r_loss, _ = rf.reverse_forward(x, c)
             r_loss.backward()
 
-            wandb.log({"loss": loss.item()})
+            wandb.log({"reverse_loss": loss.item()})
             optimizer.step()
             # count based on t
             for t, l in blsct:
